@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.keyCont{   
+    width: 200px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    margin: 50px;
+}
+.ok{
+    display: flex;
+    flex-direction: column;
+}
+.an{
+    display: flex;
+    gap: 5px;
+}
+.head{
+    display: flex;
+    gap: 5px;
+}
+.appp{
+    letter-spacing: 18px;
+    font-size: 20px;
+  }
