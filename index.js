@@ -16,7 +16,7 @@ const keyboard = [
   "G",
   "H",
   "J",
-  "K",
+  "K",                              
   "L",
   "Z",
   "X",
@@ -28,56 +28,92 @@ const keyboard = [
 ];
 
 const keyCont = document.getElementsByClassName("keyCont")[0];
-const word = ["asdfskdf", "asdfasdih", "sysdffm", "sybsd", "asdfsd"];
-const head = document.getElementsByClassName("head")[0];
-const and = document.getElementsByClassName("an")[0];
-
+const word = ["asdfs kdf", "asdfasdih", "sysdffm", "sybsd", "asdfsd"];
+const and = document.getElementsByClassName("head")[0];
+const upper = document.getElementsByClassName("an")[0];
+const ald = document.getElementById("myH1");
+let aldaa = 0;
 function random() {
   keyCont.innerHTML = "";
-  head.innerHTML = "";
   and.innerHTML = "";
-
+  const arr = [];
   const ran = Math.floor(Math.random() * word.length);
-  const inii = word[ran]; 
-  const app = document.createElement("div"); 
-  app.textContent = inii;
-  app.style.gap = "5px";
-  app.classList.add("appp");
-  and.appendChild(app);
-  app.style.display = "none";
-  for (let i = 0; i < inii.length; i++) {
-    const lin = document.createElement("div");
-    lin.textContent = "__";
-    lin.style.display = "inline-block";
-    lin.style.marginRight = "5px";
-    head.appendChild(lin);
-  }
+  let inii = word[ran];
+  console.log(inii)
+  come();
 
   for (let i = 0; i < keyboard.length; i++) {
     const ke = document.createElement("button");
     ke.textContent = keyboard[i];
-    ke.style.width = "20px";
-    ke.style.height = "20px";
+    ke.style.width = "30px";
+    ke.style.height = "30px";
 
     ke.addEventListener("click", () => {
+      ke.disabled = true;
+      let us =0;
+      const usg = ke.textContent.toLowerCase();
       for (let j = 0; j < inii.length; j++) {
-        const a = inii[j]
-          .toLowerCase()
-          .includes(keyboard[i].toLowerCase());
-        if (a) {
-          console.log("ok");
-          for(let s = 0 ; s<app.length ; s++){
-            const sd = app.includes(ke)
-                if(sd){
-                    app.style.display = "block";
-                }
-          }
+        const a = inii.includes(usg);
+        if (a === false) {
+          us++;
+          console.log(us);
+        }
+        if (us === inii.length) {
+          aldaa++;
+          console.log(aldaa);
+        }
+        if (inii[j] === usg) {
+          arr[j].textContent = usg;
+        } else {
+        }
+        if (aldaa === 1) {
+          ald.textContent = `Алдаа:${aldaa}`;
+          upper.style = "background-image: url(photos/1.jpg);";
+        }
+        if (aldaa === 2) {
+          ald.textContent = `Алдаа:${aldaa}`;
+          upper.style = "background-image: url(photos/2.jpg);";
+        }
+        if (aldaa === 3) {
+          ald.textContent = `Алдаа:${aldaa}`;
+          upper.style = "background-image: url(photos/3.jpg);";
+        }
+        if (aldaa === 4) {
+          ald.textContent = `Алдаа:${aldaa}`;
+          upper.style = "background-image: url(photos/4.jpg);";
+        }
+        if (aldaa === 5) {
+          ald.textContent = `Алдаа:${aldaa}`;
+          upper.style = "background-image: url(photos/5.jpg);";
+        }
+        if (aldaa === 6) {
+          ald.textContent = `Алдаа:${aldaa}`;
+          upper.style = "background-image: url(photos/6.jpg);";
+        }
+        if (aldaa === 7) {
+          ald.textContent = `Алдаа:${aldaa}`;
+          upper.style = "background-image: url(photos/7.jpg);";
+          alert("hojigdloo loser boy");
         }
       }
     });
 
     keyCont.appendChild(ke);
   }
+  function come(){
+    for (let i = 0; i < inii.length; i++) {
+      const lin = document.createElement("div");
+      if(inii[i] === " "){
+        lin.textContent = " ";
+        and.appendChild(lin);
+        arr.push(lin);
+      }
+      else{
+        lin.textContent = "_";
+        and.appendChild(lin);
+        arr.push(lin);
+      }
+    }
+  }
 }
-
-window.onload = random;
+window.onload= random;
