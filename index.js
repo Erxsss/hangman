@@ -16,7 +16,7 @@ const keyboard = [
   "G",
   "H",
   "J",
-  "K",                              
+  "K",
   "L",
   "Z",
   "X",
@@ -28,18 +28,38 @@ const keyboard = [
 ];
 
 const keyCont = document.getElementsByClassName("keyCont")[0];
-const word = ["asdfs kdf", "asdfasdih", "sysdffm", "sybsd", "asdfsd"];
+const word = [
+  "Erkhs galzu",
+  "Bachig",
+  "hanbajamba",
+  "guideg mashin",
+  "semben ovoo",
+];
 const and = document.getElementsByClassName("head")[0];
 const upper = document.getElementsByClassName("an")[0];
 const ald = document.getElementById("myH1");
+const hi = document.getElementsByClassName("hi")[0];
+const hw = document.getElementById("hw");
+const audio = document.getElementById("mya");
+const restart =document.getElementById("Restart");
+const start = document.getElementById("start");
 let aldaa = 0;
+let inii = "";
+let arr = [];
 function random() {
+  upper.style = "background-image: url(photos/0.jpg);";
+  audio.currentTime = 0;
+  ald.textContent = `Алдаа:0`;
+  audio.play();
+  aldaa = 0;
+  us=0  ;
+  arr = [];
+  hi.style.display = "none";
   keyCont.innerHTML = "";
   and.innerHTML = "";
-  const arr = [];
   const ran = Math.floor(Math.random() * word.length);
-  let inii = word[ran];
-  console.log(inii)
+  inii = word[ran].toLowerCase();
+  console.log(inii);
   come();
 
   for (let i = 0; i < keyboard.length; i++) {
@@ -50,7 +70,8 @@ function random() {
 
     ke.addEventListener("click", () => {
       ke.disabled = true;
-      let us =0;
+      let us = 0;
+      let zov = 0;
       const usg = ke.textContent.toLowerCase();
       for (let j = 0; j < inii.length; j++) {
         const a = inii.includes(usg);
@@ -64,7 +85,18 @@ function random() {
         }
         if (inii[j] === usg) {
           arr[j].textContent = usg;
-        } else {
+          let x = true;
+          for (let i = 0; i < arr.length; i++) {
+            if (arr[i].textContent === "_") {
+              x = false;
+            }
+          }
+          if (x) {
+            hi.style.display = "block";
+            hw.textContent = "You win !";
+            document.querySelector(".hi").style.display = "flex";
+            stop();
+          }
         }
         if (aldaa === 1) {
           ald.textContent = `Алдаа:${aldaa}`;
@@ -93,27 +125,38 @@ function random() {
         if (aldaa === 7) {
           ald.textContent = `Алдаа:${aldaa}`;
           upper.style = "background-image: url(photos/7.jpg);";
-          alert("hojigdloo loser boy");
+          hi.style.display = "block";
+          hw.textContent = "You lost !";
+          document.querySelector(".hi").style.display = "flex";
+          stop();
         }
       }
     });
-
     keyCont.appendChild(ke);
   }
-  function come(){
+  function come() {
     for (let i = 0; i < inii.length; i++) {
       const lin = document.createElement("div");
-      if(inii[i] === " "){
+      if (inii[i] === " ") {
         lin.textContent = " ";
         and.appendChild(lin);
         arr.push(lin);
-      }
-      else{
+      } else {
         lin.textContent = "_";
         and.appendChild(lin);
         arr.push(lin);
       }
     }
   }
+  function stop(){
+    audio.pause();
+  }
 }
-window.onload= random;
+start.addEventListener("click", () => {
+  random();
+  audio.play();
+});
+restart.addEventListener("click",()=>{
+  random();
+  audio.play();
+});
