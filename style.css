@@ -11,6 +11,9 @@
     align-items: center;
     justify-content: space-evenly;
     background-color: rgb(255, 242, 227);
+    background-image: url(https://w.wallhaven.cc/full/yq/wallhaven-yqjlod.png);
+    background-size: cover;
+    background-position: center;
 }
 .keyCont{   
     width: 300px;
@@ -25,6 +28,7 @@
     flex-direction: column;
     margin: 30px;
     gap: 30px;
+    color: white;
 }
 .head{
     display: flex;
@@ -66,4 +70,7 @@
     width: 80px;
     height: 30px;
     gap: 30px;
+}
+.aldaaa{
+    color: white;
 }

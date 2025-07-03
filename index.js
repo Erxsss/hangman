@@ -29,11 +29,12 @@ const keyboard = [
 
 const keyCont = document.getElementsByClassName("keyCont")[0];
 const word = [
-  "Erkhs galzu",
-  "Bachig",
-  "hanbajamba",
-  "guideg mashin",
-  "semben ovoo",
+  "David Laid",
+  "brian moser",
+  "kobe bryant",
+  "donnie darko",
+  "Tyler durden",
+  "Ryan gosling"
 ];
 const and = document.getElementsByClassName("head")[0];
 const upper = document.getElementsByClassName("an")[0];
