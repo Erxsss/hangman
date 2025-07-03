@@ -29,12 +29,17 @@ const keyboard = [
 
 const keyCont = document.getElementsByClassName("keyCont")[0];
 const word = [
-  "David Laid",
-  "brian moser",
+  "One Piece",
+  "Drake",
   "kobe bryant",
-  "donnie darko",
-  "Tyler durden",
-  "Ryan gosling"
+  "diddy",
+  "Batkhishig",
+  "Roblox",
+  "bicep",
+  "banana",
+  "mcdonald",
+  "duck",
+  "russia",
 ];
 const and = document.getElementsByClassName("head")[0];
 const upper = document.getElementsByClassName("an")[0];
