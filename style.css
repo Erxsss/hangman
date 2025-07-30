@@ -1,76 +1,76 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: rgb(255, 242, 227);
-    background-image: url(https://w.wallhaven.cc/full/yq/wallhaven-yqjlod.png);
-    background-size: cover;
-    background-position: center;
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgb(255, 242, 227);
+  background-image: url(https://w.wallhaven.cc/full/yq/wallhaven-yqjlod.png);
+  background-size: cover;
+  background-position: center;
 }
-.keyCont{   
-    width: 300px;
-    height: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    margin: 50px;
+.keyCont {
+  width: 300px;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin: 50px;
 }
-.ok{
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
-    gap: 30px;
-    color: white;
+.ok {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  gap: 30px;
+  color: white;
 }
-.head{
-    display: flex;
-    gap: 15px;
-    font-size: 30px;
-    padding-right: 10px;
+.head {
+  display: flex;
+  gap: 15px;
+  font-size: 30px;
+  padding-right: 10px;
 }
-.an{
-    display: flex;
-    gap: 5px;
-    background-image: url(photos/0.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 300px;
-    height: 400px;
+.an {
+  display: flex;
+  gap: 5px;
+  background-image: url(photos/0.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 400px;
 }
-.appp{
-    letter-spacing: 18px;
-    font-size: 20px;
+.appp {
+  letter-spacing: 18px;
+  font-size: 20px;
 }
-.hi{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 10;
-    display: none;
-    color: white;
-    justify-content: center;
-    gap: 30px ;
-    align-items: center;
-    font-size: 30px;
+.hi {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+  color: white;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  font-size: 30px;
 }
-#Restart{
-    width: 240px;
-    height: 50px;
+#Restart {
+  width: 240px;
+  height: 50px;
 }
-#start{
-    width: 80px;
-    height: 30px;
-    gap: 30px;
+#start {
+  width: 80px;
+  height: 30px;
+  gap: 30px;
 }
-.aldaaa{
-    color: white;
+.aldaaa {
+  color: white;
 }

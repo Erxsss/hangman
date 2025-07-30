@@ -47,7 +47,7 @@ const ald = document.getElementById("myH1");
 const hi = document.getElementsByClassName("hi")[0];
 const hw = document.getElementById("hw");
 const audio = document.getElementById("mya");
-const restart =document.getElementById("Restart");
+const restart = document.getElementById("Restart");
 const start = document.getElementById("start");
 let aldaa = 0;
 let inii = "";
@@ -58,7 +58,7 @@ function random() {
   ald.textContent = `Алдаа:0`;
   audio.play();
   aldaa = 0;
-  us=0  ;
+  us = 0;
   arr = [];
   hi.style.display = "none";
   keyCont.innerHTML = "";
@@ -154,7 +154,7 @@ function random() {
       }
     }
   }
-  function stop(){
+  function stop() {
     audio.pause();
   }
 }
@@ -162,7 +162,7 @@ start.addEventListener("click", () => {
   random();
   audio.play();
 });
-restart.addEventListener("click",()=>{
+restart.addEventListener("click", () => {
   random();
   audio.play();
 });
