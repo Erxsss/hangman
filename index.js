@@ -29,17 +29,19 @@ const keyboard = [
 
 const keyCont = document.getElementsByClassName("keyCont")[0];
 const word = [
-  "One Piece",
-  "Drake",
-  "kobe bryant",
-  "diddy",
-  "Batkhishig",
+  "Apple",
+  "Football",
+  "computer",
+  "Rainbow",
+  "Pizza",
   "Roblox",
-  "bicep",
-  "banana",
-  "mcdonald",
-  "duck",
-  "russia",
+  "Buuz",
+  "GYM",
+  "Good Job",
+  "Duck",
+  "Russia",
+  "Mongolia",
+  "Donald Trump"
 ];
 const and = document.getElementsByClassName("head")[0];
 const upper = document.getElementsByClassName("an")[0];
